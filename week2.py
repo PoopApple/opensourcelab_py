@@ -277,5 +277,22 @@ def q8():
     with open("lol.txt","w") as f:
         s= "Hi, I am currently pursuing my BTech from Jaypee."
         f.write(s)
+        
+def q99():
+    with open("lol1.txt","w") as f:
+        for i in range(10): 
+            s= f"this is line {i}\n"
+            f.write(s)
+        
+def q9():
+    lines = []
+    with open("lol1.txt","r") as f:
+
+        lines = f.readlines()
+
+    for l in lines[::-1]:
+        print(l)
+    
+       
 if __name__ == "__main__":
-    q7()
+    q6()
