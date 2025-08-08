@@ -292,7 +292,59 @@ def q9():
 
     for l in lines[::-1]:
         print(l)
+
+
+def q10():
+    n = int(input("Enter number of nums:\n"))
+    nums = []
+
+
+    for i in range(n):
+        num = int(input("Enter a num:\t"))
+        nums.append(num)
+        
+        
+    print([num for num in nums if num % 2 != 0])
+
+"""
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+"""
+def q11():
+    lines = []
+    with open("lol1.txt","r") as f:
+
+        filedata = f.read()
+        print(f"Chars in file:\t {len(filedata)}")
+
+
+
+
+def q12():
+
+    words = ["eat", "tea", "tan", "ate", "nat", "bat"]
     
-       
+    a = {}
+    for word in words:
+        s = ''.join(sorted(word))
+        if s in a:
+            a[s].append(word)
+        else:
+            a[s] = [word]
+
+    res = list(a.values())
+    print(res)
+
+
 if __name__ == "__main__":
-    q6()
+    q12()
